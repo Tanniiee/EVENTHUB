@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import React, {useState} from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Swiper from 'react-native-swiper';
-import { appColors } from '../../constants/appColors';
-import { appInfos } from '../../constants/appInfos';
-import { globalStyles } from '../../styles/globalStyles';
+import {appColors} from '../../constants/appColors';
+import {appInfos} from '../../constants/appInfos';
+import {globalStyles} from '../../styles/globalStyles';
+import {TextComponent} from '../../componets';
+import {fontFamilies} from '../../constants/fontFamilies';
 
-
-const Onboarding = ({navigation}:any) => {
-const [index, setIndex] = useState(0);
+const Onboarding = ({navigation}: any) => {
+  const [index, setIndex] = useState(0);
 
   return (
     <View style={[globalStyles.container]}>
@@ -22,7 +17,7 @@ const [index, setIndex] = useState(0);
         onIndexChanged={num => setIndex(num)}
         index={index}
         activeDotColor={appColors.white}
-        autoplayTimeout={0.5} 
+        autoplayTimeout={0.5}
         scrollEnabled={true}>
         <Image
           source={require('../../assets/images/onboarding-1.png')}
@@ -67,7 +62,12 @@ const [index, setIndex] = useState(0);
           },
         ]}>
         <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
-          <Text style={[styles.text, {color: appColors.gray2}]}>Skip</Text>
+          <TextComponent
+            text="Skip"
+            color={appColors.gray2}
+            font={fontFamilies.medium}
+            size={16}
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() =>
@@ -75,7 +75,12 @@ const [index, setIndex] = useState(0);
               ? navigation.navigate('LoginScreen')
               : setIndex(index + 1)
           }>
-          <Text style={styles.text}>Next</Text>
+          <TextComponent
+            text="Next"
+            color={appColors.white}
+            font={fontFamilies.medium}
+            size={16}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -84,9 +89,9 @@ const [index, setIndex] = useState(0);
 
 export default Onboarding;
 const styles = StyleSheet.create({
-text:{
-  color: appColors.white,
-  fontSize: 16,
-  fontWeight: '500',
-}
+  text: {
+    color: appColors.white,
+    fontSize: 16,
+    fontWeight: '500',
+  },
 });

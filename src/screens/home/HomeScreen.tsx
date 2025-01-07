@@ -6,7 +6,7 @@ const HomeScreen = () => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>HomeScreen</Text>
-      <Button title='Logout' onPress={async() => await AsyncStorage.clear()}/>
+      <Button title='Logout' onPress={async() => await AsyncStorage.clear}/>
     </View>
   );
 }
