@@ -1,6 +1,6 @@
 import React from 'react';
 import { ActivityIndicator, Image, ImageBackground } from 'react-native';
-import { SpaceComponent } from '../componets';
+import { SpaceComponent } from '../components';
 import { appColors } from '../constants/appColors';
 import { appInfos } from '../constants/appInfos';
 

@@ -4,7 +4,7 @@ import Swiper from 'react-native-swiper';
 import {appColors} from '../../constants/appColors';
 import {appInfos} from '../../constants/appInfos';
 import {globalStyles} from '../../styles/globalStyles';
-import {TextComponent} from '../../componets';
+import {TextComponent} from '../../components';
 import {fontFamilies} from '../../constants/fontFamilies';
 
 const Onboarding = ({navigation}: any) => {
@@ -66,7 +66,6 @@ const Onboarding = ({navigation}: any) => {
             text="Skip"
             color={appColors.gray2}
             font={fontFamilies.medium}
-            size={16}
           />
         </TouchableOpacity>
         <TouchableOpacity
@@ -79,7 +78,6 @@ const Onboarding = ({navigation}: any) => {
             text="Next"
             color={appColors.white}
             font={fontFamilies.medium}
-            size={16}
           />
         </TouchableOpacity>
       </View>
